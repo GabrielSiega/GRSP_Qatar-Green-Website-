@@ -1,5 +1,5 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: Arial, sans-serif; }
+body { font-family: Arial, sans-serif; transition: background 0.3s, color 0.3s; }
 
 /* Navbar */
 .navbar {
@@ -14,6 +14,7 @@ body { font-family: Arial, sans-serif; }
 .nav-links { display: flex; gap: 1rem; list-style: none; }
 .nav-links a { color: #fff; text-decoration: none; }
 .menu-toggle { display: none; font-size: 1.5rem; background: none; border: none; color: #fff; }
+.dark-btn { margin-left: 1rem; background: none; border: none; color: #fff; font-size: 1.2rem; cursor: pointer; }
 
 /* Hero */
 .hero {
@@ -78,6 +79,20 @@ body { font-family: Arial, sans-serif; }
   cursor: pointer;
 }
 
+/* Promotions */
+.promotions { padding: 2rem; text-align: center; }
+.promo-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.promo-grid img {
+  flex: 1 1 250px;
+  max-width: 300px;
+  border-radius: 6px;
+}
+
 /* Footer */
 footer {
   background: #333;
@@ -85,6 +100,17 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+
+/* Dark mode */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+body.dark-mode .navbar { background: #222; }
+body.dark-mode .booking { background: #1e1e1e; }
+body.dark-mode footer { background: #111; }
+body.dark-mode .btn { background: #444; color: #fff; }
+body.dark-mode .btn:hover { background: #fff; color: #800000; }
 
 /* Responsive */
 @media (max-width: 768px) {

@@ -20,6 +20,7 @@
       </ul>
     </nav>
     <button class="menu-toggle">☰</button>
+    <button id="darkModeToggle" class="dark-btn" aria-label="Toggle dark mode">🌙</button>
   </header>
 
   <!-- Hero Banner -->
@@ -71,15 +72,32 @@
     </form>
   </section>
 
+  <!-- Promotions -->
+  <section class="promotions">
+    <h2>Latest Offers</h2>
+    <div class="promo-grid">
+      <img src="Images/promo1.jpg" alt="Special fares to Europe" loading="lazy">
+      <img src="Images/promo2.jpg" alt="Discounted Asia getaways" loading="lazy">
+      <img src="Images/promo3.jpg" alt="Eco-friendly travel packages" loading="lazy">
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer>
     <p>&copy; 2026 MyAirline. All rights reserved.</p>
   </footer>
 
   <script>
+    // Mobile menu toggle
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav-links');
     toggle.addEventListener('click', () => nav.classList.toggle('active'));
+
+    // Dark mode toggle
+    const darkToggle = document.getElementById('darkModeToggle');
+    darkToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
   </script>
 </body>
 </html>
