@@ -1,5 +1,3 @@
-# GRSP_Qatar-Green-Website-
-
 # GRSP_Qatar – Green Redesign of Qatar Airways Singapore Homepage
 
 ## 📖 Overview
