@@ -2,15 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Green Website</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>World Cup Travel Promo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Project</h1>
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo">MyAirline</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Book</a></li>
+        <li><a href="#">Experience</a></li>
+        <li><a href="#">Privilege Club</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle">☰</button>
   </header>
-  <main>
-    <p>Booking services, promotions, and sustainability features.</p>
-  </main>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Score Your Spot at FIFA World Cup 26™</h1>
+      <p>Fly with comfort, style, and sustainability.</p>
+      <button>Book Now</button>
+    </div>
+  </section>
+
+  <!-- Booking Widget -->
+  <section class="booking">
+    <div class="booking-tabs">
+      <button class="active">Book a Flight</button>
+      <button>Stopover / Packages</button>
+      <button>Manage / Check-in</button>
+      <button>Flight Status</button>
+    </div>
+    <form class="booking-form">
+      <div class="trip-type">
+        <label><input type="radio" name="trip" checked> Return</label>
+        <label><input type="radio" name="trip"> One Way</label>
+        <label><input type="radio" name="trip"> Multi-city</label>
+      </div>
+      <div class="form-row">
+        <input type="text" placeholder="From">
+        <input type="text" placeholder="To">
+      </div>
+      <div class="form-row">
+        <input type="date" value="2026-01-13">
+        <input type="date" value="2026-01-20">
+      </div>
+      <div class="form-row">
+        <select>
+          <option>1 Passenger Economy</option>
+          <option>2 Passengers Business</option>
+        </select>
+        <label><input type="checkbox"> Book using Avios</label>
+        <input type="text" placeholder="Promo Code">
+      </div>
+      <button class="search-btn">Search Flights</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 MyAirline. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => nav.classList.toggle('active'));
+  </script>
 </body>
 </html>

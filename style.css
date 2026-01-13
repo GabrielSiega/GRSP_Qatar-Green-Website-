@@ -1,0 +1,95 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #800000;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+.navbar .logo { font-weight: bold; }
+.nav-links { display: flex; gap: 1rem; list-style: none; }
+.nav-links a { color: #fff; text-decoration: none; }
+.menu-toggle { display: none; font-size: 1.5rem; background: none; border: none; color: #fff; }
+
+.hero {
+  background: url('Images/fifa-banner.png') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0,0,0,0.6);
+  padding: 2rem;
+  text-align: center;
+}
+.hero-overlay button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  color: #800000;
+  border: none;
+  cursor: pointer;
+}
+
+.booking {
+  padding: 2rem;
+  background: #f4f4f4;
+}
+.booking-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.booking-tabs button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+}
+.booking-tabs .active {
+  background: #800000;
+  color: #fff;
+}
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.booking-form input, .booking-form select {
+  padding: 0.5rem;
+  flex: 1 1 200px;
+}
+.search-btn {
+  background: #800000;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  cursor: pointer;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links { display: none; flex-direction: column; background: #800000; }
+  .nav-links.active { display: flex; }
+  .menu-toggle { display: block; }
+  .form-row { flex-direction: column; }
+}
